@@ -37,7 +37,12 @@ jobs:
       - name: Block obvious secret patterns (best-effort)
         run: |
           set +e
-          git grep -nE 'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|AWS_SECRET_ACCESS_KEY|AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z\-_]{35}' -- .
+          # Only scan code/config surfaces (avoid docs/licenses/examples).
+          git grep -nE 'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|AWS_SECRET_ACCESS_KEY|AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z\-_]{35}' -- \
+            '*.js' '*.mjs' '*.cjs' '*.ts' '*.mts' '*.cts' \
+            '*.json' '*.yml' '*.yaml' '*.toml' '*.ini' \
+            '*.sh' '*.bash' '*.zsh' '*.ps1' \
+            '.github/workflows/*'
           status=$?
           set -e
           if [ $status -eq 0 ]; then
