@@ -1,0 +1,1 @@
+import "../tests/packs/golden.mjs";

@@ -1,0 +1,75 @@
+{
+  "id": "PC12",
+  "tool": "publish.draft.commit",
+  "draft_kind": "x_post",
+  "content": "Draft commit valid live.\n",
+  "git_branch": "egl/th001c_draft_commit_valid_live",
+  "base_branch": "main",
+  "commit_message": "EGL draft commit (live)",
+  "force_nonce": "FIXTURE:PUBLISH_DRAFT_COMMIT_VALID_LIVE",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.2.0",
+    "permit_id": "PERMIT:PC12",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:PUBLISH_DRAFT_COMMIT_VALID_LIVE",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:5bdb942d378fd0de0706a97ed81fcfa509690a55d489135ea6c237e80a6ee783429d02a35acee6ad238deccfb0abf3d64762b0c16822d4190dad1e282fc972f3",
+      "intent_hash_sha3_512": "sha3-512:e99f6d4174d98ed476f884a580158e49782cee4cfa073f34ed0325be61a2e8d347c424bc83ada592c5885046d6914f1abb1dcae46c51dd8d448c3a8cf9288df7"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20,
+      "allowed_ops": [
+        "file.write"
+      ],
+      "max_diff_bytes": 200000,
+      "max_added_lines": 200000,
+      "max_removed_lines": 200000,
+      "git": {
+        "allow": true,
+        "repo_root": ".",
+        "allowed_base_branch": "main",
+        "allowed_branch_prefix": "egl/",
+        "allow_create_branch": true,
+        "allow_apply_patch": true,
+        "allow_stage": true,
+        "allow_commit": true,
+        "deny_push": true,
+        "deny_remote": true,
+        "max_files_changed": 20,
+        "max_commit_bytes": 1048576
+      }
+    },
+    "permit_sha256": "sha256:2127a993e1b8a9d8addb9b8c8bc264d10fde7da33e3d2cc8f47494a30b072065"
+  },
+  "ratification_token": {
+    "schema_id": "EGL.GIT_RATIFICATION_TOKEN",
+    "version": "0.1.0",
+    "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+    "plan_hash": "sha3-512:5bdb942d378fd0de0706a97ed81fcfa509690a55d489135ea6c237e80a6ee783429d02a35acee6ad238deccfb0abf3d64762b0c16822d4190dad1e282fc972f3",
+    "intent_hash": "sha3-512:e99f6d4174d98ed476f884a580158e49782cee4cfa073f34ed0325be61a2e8d347c424bc83ada592c5885046d6914f1abb1dcae46c51dd8d448c3a8cf9288df7",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:PUBLISH_DRAFT_COMMIT_VALID_LIVE",
+    "expires_ts": "2099-01-01T00:00:00Z",
+    "approver_id": "HUMAN_TEST",
+    "git_branch": "egl/th001c_draft_commit_valid_live",
+    "diff_sha256": "sha256:216a694ac49641d87bc0d893854f34ca269ed9d3fb571c228437518f92009147",
+    "token_sha256": "07c13b4ba86edbc19b232d21ac6d01243c1c40bf242e1e075bbf90aba19a46e6"
+  }
+}

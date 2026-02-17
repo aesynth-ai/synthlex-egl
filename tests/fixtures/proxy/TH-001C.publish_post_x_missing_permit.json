@@ -1,0 +1,7 @@
+{
+  "id": "PX01",
+  "tool": "publish.post.x",
+  "payload_text": "Hello from post stub (no permit).\n",
+  "source_commit_hash": "deadbeef00deadbeef00deadbeef00deadbeef00",
+  "force_nonce": "FIXTURE:PUBLISH_POST_MISSING_PERMIT"
+}

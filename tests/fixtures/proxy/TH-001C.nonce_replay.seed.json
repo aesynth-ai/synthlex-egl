@@ -1,0 +1,37 @@
+{
+  "id": "C5",
+  "tool": "fs.read",
+  "path": "sandbox/_th_tmp/seed.txt",
+  "force_nonce": "FIXTURE:NONCE_REPLAY",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.1.0",
+    "permit_id": "PERMIT:C5",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:NONCE_REPLAY",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:bd41a4ba67abde9dab3f8f8e30ea91e77e4b4de0493d90eff87556a4f3fda82f98a6b9131d903f4c0f701fff1e307a4325df2a229ae69b94d3a7f7eb33c7d2a7",
+      "intent_hash_sha3_512": "sha3-512:a735b625cb4c9b45b51061d3c21cd3342d5d38455734b034e86c7b4bd290a1a3461a72d500218fbf9291b93655b1a42c48d05edf349a5c9dcec21c0330d9120d"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20
+    },
+    "permit_sha256": "sha256:224b9de8cd91042cf35337f39351ca3aebc99de2764a5bd89bd9ed98e611adb4"
+  }
+}

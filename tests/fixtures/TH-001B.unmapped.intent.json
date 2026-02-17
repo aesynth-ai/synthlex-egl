@@ -1,0 +1,16 @@
+{
+  "schema_id": "EGL.INTENT",
+  "version": "0.1.0",
+  "intent_id": "TH-001B-UNMAPPED",
+  "actions": [
+    {
+      "action_id": "A1",
+      "kind": "process",
+      "tool_surface_id": "process.python",
+      "process": {
+        "command": "python",
+        "args": ["-c", "print('nope')"]
+      }
+    }
+  ]
+}

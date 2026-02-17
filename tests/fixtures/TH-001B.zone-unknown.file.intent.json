@@ -1,0 +1,17 @@
+{
+  "schema_id": "EGL.INTENT",
+  "version": "0.1.0",
+  "intent_id": "TH-001B-ZONE-UNKNOWN",
+  "actions": [
+    {
+      "action_id": "A1",
+      "kind": "file",
+      "tool_surface_id": "file.read",
+      "file": {
+        "op": "read",
+        "zone": "UNKNOWN",
+        "path": "docs/readme.txt"
+      }
+    }
+  ]
+}

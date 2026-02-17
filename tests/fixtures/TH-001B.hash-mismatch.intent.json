@@ -1,0 +1,17 @@
+{
+  "schema_id": "EGL.INTENT",
+  "version": "0.1.0",
+  "intent_id": "TH-001B-HASH-MISMATCH",
+  "expected_plan_hash": "sha3-512:00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "actions": [
+    {
+      "action_id": "A1",
+      "kind": "process",
+      "tool_surface_id": "process.node",
+      "process": {
+        "command": "node",
+        "args": ["-e", "console.log('hash')"]
+      }
+    }
+  ]
+}

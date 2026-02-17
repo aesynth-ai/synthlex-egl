@@ -1,0 +1,5 @@
+{
+  "id": "C1",
+  "tool": "fs.read",
+  "path": "sandbox/_th_tmp/seed.txt"
+}

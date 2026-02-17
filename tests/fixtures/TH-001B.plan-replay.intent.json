@@ -1,0 +1,23 @@
+{
+  "schema_id": "EGL.INTENT",
+  "version": "0.1.0",
+  "intent_id": "TH-001B-PLAN-REPLAY",
+  "prohibit_replay": true,
+  "seen_plan_hashes": [
+    "sha3-512:1922a23f42e6a676975dd9aa3a9ff5bf80905cc924e8b29e4e16fa3199d9e76634708b30c2ab3c7c0294da2983635ce7c6144441c0f79bff6c51d084d8803bf0"
+  ],
+  "actions": [
+    {
+      "action_id": "A1",
+      "kind": "process",
+      "tool_surface_id": "process.node",
+      "process": {
+        "command": "node",
+        "args": [
+          "-e",
+          "console.log('replay')"
+        ]
+      }
+    }
+  ]
+}

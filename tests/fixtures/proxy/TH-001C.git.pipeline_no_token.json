@@ -1,0 +1,61 @@
+{
+  "id": "G12",
+  "tool": "git.pipeline_commit_from_diff",
+  "force_nonce": "FIXTURE:GIT_PIPELINE_NO_TOKEN",
+  "git_branch": "egl/th001c_git_no_token",
+  "base_branch": "main",
+  "source_diff_fixture_id": "diff_write_valid_apply",
+  "commit_message": "EGL git pipeline (no token)",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.2.0",
+    "permit_id": "PERMIT:G12",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:GIT_PIPELINE_NO_TOKEN",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:747d55df79812b47ba73c6c1b7e2979d57fb7bfd2a84357c5c31e55ca0a24353197d0aa689231f7e86aa350d329cefa8690556f1aecf79787c05850051efb94d",
+      "intent_hash_sha3_512": "sha3-512:92b39905241f44b235ee4f47595f970b6293bf0d86f76471bbe9b7cd4bcc4477384146256c98e723efa4cef25239212544c139f4839852aef1184dbec9a48831"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20,
+      "allowed_ops": [
+        "file.read",
+        "file.write"
+      ],
+      "max_diff_bytes": 200000,
+      "max_added_lines": 200000,
+      "max_removed_lines": 200000,
+      "git": {
+        "allow": true,
+        "repo_root": ".",
+        "allowed_base_branch": "main",
+        "allowed_branch_prefix": "egl/",
+        "allow_create_branch": true,
+        "allow_apply_patch": true,
+        "allow_stage": true,
+        "allow_commit": true,
+        "deny_push": true,
+        "deny_remote": true,
+        "max_files_changed": 20,
+        "max_commit_bytes": 1048576
+      }
+    },
+    "permit_sha256": "sha256:ad2a84c178e84c66e93e258d515647c4883347f41b99d4294b613b48f74ab4fb"
+  }
+}

@@ -1,0 +1,1 @@
+EGL_DIFF_WRITE:sandbox/_th_tmp/permit_test.txt

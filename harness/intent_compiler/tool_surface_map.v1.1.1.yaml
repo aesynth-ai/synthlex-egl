@@ -1,0 +1,118 @@
+---
+schema_id: EGL.TOOL_SURFACE_MAP
+version: "1.1.1"
+status: active
+
+# A tool surface is the governed interface boundary for an executable action.
+# Unmapped tool surfaces MUST be refused hard by the Intent Compiler.
+
+surfaces:
+  - surface_id: process.node
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Node.js process execution surface (governed).
+
+  - surface_id: exec.sandbox
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Exec surface classified as sandbox (dry-run in Step-04).
+
+  - surface_id: exec.host
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Exec surface classified as host (dry-run in Step-04).
+
+  - surface_id: file.read
+    kind: file
+    schema_ref: schemas/mvm.file.schema.json
+    description: File read surface (governed).
+
+  - surface_id: file.write
+    kind: file
+    schema_ref: schemas/mvm.file.schema.json
+    description: File write surface (governed).
+
+  - surface_id: file.delete
+    kind: file
+    schema_ref: schemas/mvm.file.schema.json
+    description: File delete surface (governed).
+
+  - surface_id: net.http
+    kind: net
+    schema_ref: schemas/mvm.net.schema.json
+    description: HTTP network surface (governed).
+
+  - surface_id: browser.navigate
+    kind: net
+    schema_ref: schemas/mvm.net.schema.json
+    description: Browser navigation surface (dry-run in Step-04).
+
+  - surface_id: skill.install
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Governed skill installation surface (stubbed; requires HITL).
+
+  - surface_id: git.branch_create
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Local git branch creation surface (no remote).
+
+  - surface_id: git.apply_patch
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Local git apply patch surface (no remote).
+
+  - surface_id: git.stage
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Local git stage surface (no remote).
+
+  - surface_id: git.commit
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Local git commit surface (no remote).
+
+  - surface_id: git.pipeline_commit_from_diff
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Local git pipeline: branch-create + apply-diff + stage + commit (no remote).
+
+  - surface_id: publish.draft.create
+    kind: file
+    schema_ref: schemas/mvm.file.schema.json
+    description: Publication draft creation surface (sandbox-only, diff-first, no post).
+
+  - surface_id: publish.draft.bundle
+    kind: file
+    schema_ref: schemas/mvm.file.schema.json
+    description: Publication draft bundling surface (sandbox-only, diff-first, no post).
+
+  - surface_id: publish.draft.commit
+    kind: file
+    schema_ref: schemas/mvm.file.schema.json
+    description: Chained publish draft create + governed git commit surface (live-only git).
+
+  - surface_id: publish.post.x
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Publication post surface (X) stubbed (no network), HITL-gated.
+
+  - surface_id: publish.post.x_thread
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Publication post surface (X thread) stubbed (no network), HITL-gated.
+
+  - surface_id: code.patch.apply
+    kind: file
+    schema_ref: schemas/mvm.file.schema.json
+    description: Governed patch apply surface (diff-first, permit-scoped file write).
+
+  - surface_id: code.test.run
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Governed test run surface (permit-gated, allowlisted command, stubbed execution).
+
+  - surface_id: code.deps.fetch
+    kind: process
+    schema_ref: schemas/mvm.process.schema.json
+    description: Governed dependency fetch surface (permit-gated, allowlisted command, lockfile-bound; live optional).

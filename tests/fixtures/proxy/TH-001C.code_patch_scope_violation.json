@@ -1,0 +1,44 @@
+{
+  "id": "CP02",
+  "tool": "code.patch.apply",
+  "path": "docs/_th_scope_violation.txt",
+  "after_text": "CODE_PATCH_APPLY:scope_violation\n",
+  "force_nonce": "FIXTURE:CODE_PATCH_SCOPE_VIOLATION",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.2.0",
+    "permit_id": "PERMIT:CP02",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:CODE_PATCH_SCOPE_VIOLATION",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:1e32bb31efaf18597d47d3970e9261259446609ee350c508ae508c38a6e02b7b67f8f6efac751f35a4c6f439cb1a7502adadcc75b374b750327aa67ff07d0671",
+      "intent_hash_sha3_512": "sha3-512:59aa89eb5247a9299ffe9aa19cd99c690b23797d22a2aefcfbab9b60449f2cafa19ccd5c962986fca5cf2d749f5302bae047d3d0a7646c63ecba66dbeb4198ed"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20,
+      "allowed_ops": [
+        "file.write"
+      ],
+      "max_diff_bytes": 20000,
+      "max_added_lines": 500,
+      "max_removed_lines": 500
+    },
+    "permit_sha256": "sha256:97bfdd40ae02415d04da90b4fc2e0129d9a6b68210f9087b2b2c2fef3458d91e"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "C20",
+  "tool": "skill.install",
+  "skill_id": "example.skill",
+  "artifact": {
+    "bytes_b64": "aGVsbG8=",
+    "declared_sha256": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+  },
+  "capability_diff": {
+    "adds_tools": [
+      "fs.write",
+      "exec"
+    ],
+    "adds_egress": [
+      "example.com"
+    ],
+    "adds_filesystem_write_roots": [
+      "/sandbox/plugins"
+    ],
+    "notes": "surface expansion requires HITL"
+  },
+  "requested_authority_profile": "skill_install.profile.yaml",
+  "version_lock": "1.2.3",
+  "force_nonce": "FIXTURE:SKILL_INSTALL_QUORUM"
+}

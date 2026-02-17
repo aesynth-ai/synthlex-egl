@@ -1,0 +1,18 @@
+{
+  "id": "C10",
+  "tool": "skill.install",
+  "skill_id": "example.skill",
+  "artifact": {
+    "bytes_b64": "aGVsbG8=",
+    "declared_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "capability_diff": {
+    "adds_tools": [
+      "fs.write",
+      "exec"
+    ],
+    "notes": "adds governed surfaces"
+  },
+  "requested_authority_profile": "skill_install.profile.yaml",
+  "version_lock": "1.2.3"
+}

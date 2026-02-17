@@ -1,0 +1,6 @@
+{
+  "id": "C30",
+  "tool": "fs.write",
+  "path": "sandbox/_th_tmp/permit_test.txt",
+  "force_nonce": "FIXTURE:EXEC_PERMIT_WRITE_MISSING"
+}

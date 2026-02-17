@@ -1,0 +1,9 @@
+{
+  "id": "CD01",
+  "tool": "code.deps.fetch",
+  "cwd": ".",
+  "cmd": "npm ci",
+  "env_profile": "node_deps_min",
+  "lockfile_path": "tests/fixtures/deps/lockfile_v1.txt",
+  "force_nonce": "FIXTURE:CODE_DEPS_MISSING_PERMIT"
+}

@@ -1,0 +1,9 @@
+{
+  "id": "G10",
+  "tool": "git.pipeline_commit_from_diff",
+  "force_nonce": "FIXTURE:GIT_PIPELINE_MISSING_PERMIT",
+  "git_branch": "egl/th001c_git_missing_permit",
+  "base_branch": "main",
+  "source_diff_fixture_id": "diff_write_valid_apply",
+  "commit_message": "EGL git pipeline (missing permit)"
+}

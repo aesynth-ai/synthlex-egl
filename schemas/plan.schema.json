@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://synthlex.org/schemas/egl/plan.schema.json",
+  "title": "EGL Plan",
+  "type": "object",
+  "additionalProperties": true
+}

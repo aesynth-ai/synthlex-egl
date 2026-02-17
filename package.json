@@ -1,0 +1,15 @@
+{
+  "name": "synthlex-egl",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "ph2:a1": "node ./runner.mjs --pack tests/packs/TH-001C.pack.json --run-id PH2A1 --attest mock --source proxy",
+    "ph2:a2": "node ./runner.mjs --pack tests/packs/TH-001C.pack.json --run-id PH2A2 --attest mock --source proxy",
+    "selftest": "node tests/packs/TH-001C.golden.mjs --pack tests/packs/TH-001C.pack.json --runA STC --runB STD && node tests/packs/golden.mjs --pack tests/packs/TH-001B.pack.json --runA STB --runB STC",
+    "help": "node ./runner.mjs --help"
+  }
+}
+

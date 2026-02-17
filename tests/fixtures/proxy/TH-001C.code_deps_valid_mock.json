@@ -1,0 +1,70 @@
+{
+  "id": "CD03",
+  "tool": "code.deps.fetch",
+  "cwd": ".",
+  "cmd": "npm ci",
+  "env_profile": "node_deps_min",
+  "lockfile_path": "tests/fixtures/deps/lockfile_v1.txt",
+  "force_nonce": "FIXTURE:CODE_DEPS_VALID_MOCK",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.2.0",
+    "permit_id": "PERMIT:CD03",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:CODE_DEPS_VALID_MOCK",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:44f07108c0a545c67aaf133c27e913fba2305b635311ce5bd71c065bfda796afa2b39600408649e6fc21756fab0165e8b07dd86950361891f6a49fa1c1bc4364",
+      "intent_hash_sha3_512": "sha3-512:cbccdebcb80f209f81c28e69730cd5483f5dce058c2d37d806ee452ee0be69d5efbf655c2fc85cf6e4dbd916a44065efb5d6d13e519e3d51ccc30a9ea07bd9be"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20,
+      "allowed_ops": [
+        "file.read",
+        "file.write"
+      ],
+      "max_diff_bytes": 200000,
+      "max_added_lines": 200000,
+      "max_removed_lines": 200000,
+      "egress": {
+        "allow": true,
+        "allowlist": [
+          "registry.npmjs.org"
+        ],
+        "allow_http": false,
+        "allow_localhost": false,
+        "allow_lan": false
+      },
+      "deps": {
+        "allow": true,
+        "profiles": [
+          "node_deps_min"
+        ],
+        "allowed_cmds": [
+          "npm ci"
+        ],
+        "lockfile_roots": [
+          "tests/fixtures/deps/"
+        ],
+        "max_runtime_ms": 60000,
+        "max_output_bytes": 200000
+      }
+    },
+    "permit_sha256": "sha256:9371d1d7ba097f308debc0b36f704c34574d2d8b4472291ef811383532385188"
+  }
+}

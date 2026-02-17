@@ -1,0 +1,10 @@
+{
+  "id": "PC10",
+  "tool": "publish.draft.commit",
+  "draft_kind": "x_post",
+  "content": "Draft commit missing permit.\n",
+  "git_branch": "egl/th001c_draft_commit_missing_permit",
+  "base_branch": "main",
+  "commit_message": "EGL draft commit (missing permit)",
+  "force_nonce": "FIXTURE:PUBLISH_DRAFT_COMMIT_MISSING_PERMIT"
+}

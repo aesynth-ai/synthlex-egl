@@ -1,0 +1,48 @@
+{
+  "id": "C41",
+  "tool": "fs.write",
+  "path": "sandbox/_th_tmp/diff_too_large.txt",
+  "force_nonce": "FIXTURE:DIFF_TOO_LARGE",
+  "write_spec": {
+    "kind": "repeat",
+    "char": "A",
+    "count": 70000
+  },
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.1.0",
+    "permit_id": "PERMIT:C41",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:DIFF_TOO_LARGE",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:241e2957771c84bec940b2b876162b8964f9fb7e425c4354e4d2eade4f8e9effc2308d540ff6ba7e9a8380ad1495a8d9482235aca1991c7e5ac6980f11e7dfec",
+      "intent_hash_sha3_512": "sha3-512:c0d349d0477f4ca1998e4685db015a3385314912a4d95c1597f3b1432652585c5d3187dd8c06ce532c8078f1274a04019000ff0c7c1abd9fcfb3ce1033608565"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20,
+      "allowed_ops": [
+        "file.write"
+      ],
+      "max_diff_bytes": 0,
+      "max_added_lines": 200000,
+      "max_removed_lines": 200000
+    },
+    "permit_sha256": "sha256:2b7c36601559dbe4961544af0a359efa245b0c56e6b4f4c9031cebb635880620"
+  }
+}

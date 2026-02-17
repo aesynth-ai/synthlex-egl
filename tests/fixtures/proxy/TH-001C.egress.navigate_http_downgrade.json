@@ -1,0 +1,53 @@
+{
+  "id": "EN03",
+  "tool": "browser.navigate",
+  "url": "http://example.com/path",
+  "force_nonce": "FIXTURE:EGRESS_NAV_HTTP_DOWNGRADE",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.2.0",
+    "permit_id": "PERMIT:EN03",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:EGRESS_NAV_HTTP_DOWNGRADE",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:18b84dd9b1c0246dad17bea9687d462371d9812249c12a33c592cdabca1de5f84ec589286082e24b60d6f714b2471d2e0eefca46115ecf8445011a1131e580c5",
+      "intent_hash_sha3_512": "sha3-512:9453ebe1570202c798266d3ca622188c29d10f4f58a803d28d487f0b11d3fe73285c70263fe2c4f4dda220d57b2371a515296dba27c22df5c556cadbb1dc76b1"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20,
+      "allowed_ops": [
+        "file.read",
+        "file.write"
+      ],
+      "max_diff_bytes": 200000,
+      "max_added_lines": 200000,
+      "max_removed_lines": 200000,
+      "egress": {
+        "allow": true,
+        "allowlist": [
+          "example.com"
+        ],
+        "allow_http": false,
+        "allow_localhost": false,
+        "allow_lan": false
+      }
+    },
+    "permit_sha256": "sha256:c9f8e6527b4165db8499fc00c76159b9d3fed85bc3bc6a3ff61c07ec6520b598"
+  }
+}

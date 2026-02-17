@@ -1,0 +1,7 @@
+{
+  "id": "CP01",
+  "tool": "code.patch.apply",
+  "path": "sandbox/_th_tmp/code_patch_target.txt",
+  "after_text": "CODE_PATCH_APPLY:missing_permit\n",
+  "force_nonce": "FIXTURE:CODE_PATCH_MISSING_PERMIT"
+}

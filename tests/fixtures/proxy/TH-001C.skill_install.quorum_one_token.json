@@ -1,0 +1,39 @@
+{
+  "id": "C21",
+  "tool": "skill.install",
+  "skill_id": "example.skill",
+  "artifact": {
+    "bytes_b64": "aGVsbG8=",
+    "declared_sha256": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+  },
+  "capability_diff": {
+    "adds_tools": [
+      "fs.write",
+      "exec"
+    ],
+    "adds_egress": [
+      "example.com"
+    ],
+    "adds_filesystem_write_roots": [
+      "/sandbox/plugins"
+    ],
+    "notes": "surface expansion requires HITL"
+  },
+  "requested_authority_profile": "skill_install.profile.yaml",
+  "version_lock": "1.2.3",
+  "force_nonce": "FIXTURE:SKILL_INSTALL_QUORUM",
+  "ratification_tokens": [
+    {
+      "schema_id": "EGL.RATIFICATION_TOKEN",
+      "version": "0.1.0",
+      "sce_hash_sha256": "83f0647c902491d4b70d88d9f14c012d17f7a1ef26d5ea0358067d6e78f77e54",
+      "authority_diff_sha256": "7fda635f852e7b4dd0446b661a2398d5d9c32730837e96904806853777098eb2",
+      "intent_hash": "sha3-512:9abd052a5b98faf18758568ae03334d048c54044039eefbc2ec449d92471be80c7ca72b1a3ff3318a05f42ae168f335c97f6c20dacbbddd327c9d1d01b01d609",
+      "lane_id": "proxy",
+      "attestation_nonce": "FIXTURE:SKILL_INSTALL_QUORUM",
+      "expires_ts": "2026-02-14T00:00:00Z",
+      "approver_id": "HUMAN_A",
+      "token_sha256": "3a52d12f38731930ad474b9684ade9bbb1f14f5eb7ea8d30187165b331aa7cc1"
+    }
+  ]
+}

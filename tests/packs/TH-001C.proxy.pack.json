@@ -1,0 +1,9 @@
+{
+  "pack_id": "TH-001C",
+  "version": "0.1.0",
+  "fixtures": {
+    "fs_read": "tests/fixtures/proxy/TH-001C.fs.read.json",
+    "system_core_delete": "tests/fixtures/proxy/TH-001C.system_core.delete.json",
+    "unmapped_tool": "tests/fixtures/proxy/TH-001C.unmapped.json"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "CT01",
+  "tool": "code.test.run",
+  "cwd": ".",
+  "cmd": "node -v",
+  "env_profile": "node_test_min",
+  "force_nonce": "FIXTURE:CODE_TEST_MISSING_PERMIT"
+}

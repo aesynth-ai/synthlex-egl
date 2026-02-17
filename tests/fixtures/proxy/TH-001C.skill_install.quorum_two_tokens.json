@@ -1,0 +1,51 @@
+{
+  "id": "C22",
+  "tool": "skill.install",
+  "skill_id": "example.skill",
+  "artifact": {
+    "bytes_b64": "aGVsbG8=",
+    "declared_sha256": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+  },
+  "capability_diff": {
+    "adds_tools": [
+      "fs.write",
+      "exec"
+    ],
+    "adds_egress": [
+      "example.com"
+    ],
+    "adds_filesystem_write_roots": [
+      "/sandbox/plugins"
+    ],
+    "notes": "surface expansion requires HITL"
+  },
+  "requested_authority_profile": "skill_install.profile.yaml",
+  "version_lock": "1.2.3",
+  "force_nonce": "FIXTURE:SKILL_INSTALL_QUORUM",
+  "ratification_tokens": [
+    {
+      "schema_id": "EGL.RATIFICATION_TOKEN",
+      "version": "0.1.0",
+      "sce_hash_sha256": "10fdb9548d66f7daf2a82114c00b2acf12b48e076a1269cba1d0e34108bb031b",
+      "authority_diff_sha256": "7fda635f852e7b4dd0446b661a2398d5d9c32730837e96904806853777098eb2",
+      "intent_hash": "sha3-512:aed2a6f0842df9e134596ae348c0c461ec88d5d17fd93bf4ebe5d40d48d31b27410c4f176a197a35cee93b1079e401b89623f688124feb0ab6fed05ce79f99d9",
+      "lane_id": "proxy",
+      "attestation_nonce": "FIXTURE:SKILL_INSTALL_QUORUM",
+      "expires_ts": "2026-02-14T00:00:00Z",
+      "approver_id": "HUMAN_A",
+      "token_sha256": "65658202cf7f2619e5d3878c3ed1cfa595752b81fcc45de64915c97b8cb6fefd"
+    },
+    {
+      "schema_id": "EGL.RATIFICATION_TOKEN",
+      "version": "0.1.0",
+      "sce_hash_sha256": "10fdb9548d66f7daf2a82114c00b2acf12b48e076a1269cba1d0e34108bb031b",
+      "authority_diff_sha256": "7fda635f852e7b4dd0446b661a2398d5d9c32730837e96904806853777098eb2",
+      "intent_hash": "sha3-512:aed2a6f0842df9e134596ae348c0c461ec88d5d17fd93bf4ebe5d40d48d31b27410c4f176a197a35cee93b1079e401b89623f688124feb0ab6fed05ce79f99d9",
+      "lane_id": "proxy",
+      "attestation_nonce": "FIXTURE:SKILL_INSTALL_QUORUM",
+      "expires_ts": "2026-02-14T00:00:00Z",
+      "approver_id": "HUMAN_B",
+      "token_sha256": "e1603b73f6e1252789651b32be279e31c7d2ff99a1bf444c5d97e2ec50ddbfb8"
+    }
+  ]
+}

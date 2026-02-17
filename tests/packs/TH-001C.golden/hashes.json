@@ -1,0 +1,11 @@
+{
+  "pack_id": "TH-001C",
+  "mode": {
+    "attest": "mock",
+    "source": "proxy"
+  },
+  "expected": {
+    "plan_freeze": "62106608609e9d1d453cb3b91495b37c7f2540282e6a54d105bb6a89c56348ed",
+    "ledger_canonical": "76e1783b5930001b93928c6aad83944698d576ea63a93761f9d0371a474893b2"
+  }
+}

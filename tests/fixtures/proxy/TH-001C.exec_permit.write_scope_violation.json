@@ -1,0 +1,44 @@
+{
+  "id": "C33",
+  "tool": "fs.write",
+  "path": "docs/SPEC-EGL-TH-001.md",
+  "force_nonce": "FIXTURE:EXEC_PERMIT_WRITE_SCOPE_VIOLATION",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.1.0",
+    "permit_id": "PERMIT:C33",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:EXEC_PERMIT_WRITE_SCOPE_VIOLATION",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:9715bde650f6a1a2050714fed114d66be1dd04813596c8f0c3b4f2066a3e4f44ec81184c59fbc6cf87e135303677fa4699a0034582c85424046c76b4f88314d0",
+      "intent_hash_sha3_512": "sha3-512:482d2066ab794fcd2bd8ddcc3ca6a9cec0c9283a6426d47490b6c98a9941abc3e2b9b9bd0b30cf242988f5b16888265aa71f6908e559f42a9892ede4a39a67ab"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20,
+      "allowed_ops": [
+        "file.read",
+        "file.write"
+      ],
+      "max_diff_bytes": 200000,
+      "max_added_lines": 200000,
+      "max_removed_lines": 200000
+    },
+    "permit_sha256": "sha256:67546ae09eb86836102ef9d024d89e65b2c6348770a5fe4ee7ca98ac2ddf3dc4"
+  }
+}

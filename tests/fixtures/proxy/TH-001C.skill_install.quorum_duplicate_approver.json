@@ -1,0 +1,51 @@
+{
+  "id": "C23",
+  "tool": "skill.install",
+  "skill_id": "example.skill",
+  "artifact": {
+    "bytes_b64": "aGVsbG8=",
+    "declared_sha256": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+  },
+  "capability_diff": {
+    "adds_tools": [
+      "fs.write",
+      "exec"
+    ],
+    "adds_egress": [
+      "example.com"
+    ],
+    "adds_filesystem_write_roots": [
+      "/sandbox/plugins"
+    ],
+    "notes": "surface expansion requires HITL"
+  },
+  "requested_authority_profile": "skill_install.profile.yaml",
+  "version_lock": "1.2.3",
+  "force_nonce": "FIXTURE:SKILL_INSTALL_QUORUM",
+  "ratification_tokens": [
+    {
+      "schema_id": "EGL.RATIFICATION_TOKEN",
+      "version": "0.1.0",
+      "sce_hash_sha256": "1cf5bf0bb98a21fb23466708bafd7e7917557ac80e15c3325be08bb696a7f622",
+      "authority_diff_sha256": "7fda635f852e7b4dd0446b661a2398d5d9c32730837e96904806853777098eb2",
+      "intent_hash": "sha3-512:715e60ab965c2b4f8e52ac72886493eef8c96a2c203c88be8c26e6ccf01c86de1a960cb230936973f664a9ce310142b42b66e836f00dc5be0040d5f2c5a148cf",
+      "lane_id": "proxy",
+      "attestation_nonce": "FIXTURE:SKILL_INSTALL_QUORUM",
+      "expires_ts": "2026-02-14T00:00:00Z",
+      "approver_id": "HUMAN_A",
+      "token_sha256": "56e0e4f775500bb347c36e9d97200a796c34c92cbfeb8f4cadd18615b3c6caf8"
+    },
+    {
+      "schema_id": "EGL.RATIFICATION_TOKEN",
+      "version": "0.1.0",
+      "sce_hash_sha256": "1cf5bf0bb98a21fb23466708bafd7e7917557ac80e15c3325be08bb696a7f622",
+      "authority_diff_sha256": "7fda635f852e7b4dd0446b661a2398d5d9c32730837e96904806853777098eb2",
+      "intent_hash": "sha3-512:715e60ab965c2b4f8e52ac72886493eef8c96a2c203c88be8c26e6ccf01c86de1a960cb230936973f664a9ce310142b42b66e836f00dc5be0040d5f2c5a148cf",
+      "lane_id": "proxy",
+      "attestation_nonce": "FIXTURE:SKILL_INSTALL_QUORUM",
+      "expires_ts": "2026-02-14T00:00:00Z",
+      "approver_id": "HUMAN_A",
+      "token_sha256": "56e0e4f775500bb347c36e9d97200a796c34c92cbfeb8f4cadd18615b3c6caf8"
+    }
+  ]
+}

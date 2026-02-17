@@ -1,0 +1,37 @@
+{
+  "id": "C13",
+  "tool": "skill.install",
+  "skill_id": "example.skill",
+  "artifact": {
+    "bytes_b64": "aGVsbG8=",
+    "declared_sha256": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+  },
+  "capability_diff": {
+    "adds_tools": [
+      "fs.write",
+      "exec"
+    ],
+    "adds_egress": [
+      "example.com:443"
+    ],
+    "adds_filesystem_write_roots": [
+      "/sandbox/plugins"
+    ],
+    "notes": "surface expansion requires HITL"
+  },
+  "requested_authority_profile": "skill_install.profile.yaml",
+  "version_lock": "1.2.3",
+  "force_nonce": "FIXTURE:SKILL_INSTALL_TOKEN_INVALID",
+  "ratification_token": {
+    "schema_id": "EGL.RATIFICATION_TOKEN",
+    "version": "0.1.0",
+    "sce_hash_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "authority_diff_sha256": "f96b3456304e35781228258995daa0202907f3d850deaa186e39d8b376155540",
+    "intent_hash": "sha3-512:5a7f61e09dac5d37fd7dcaf9cf4d1389bed4bd3a05e80f2f20627d2c039623634e13d00fc22c16b6357ce192bfeb4f2e050de597e06d6de21a501e01bfe2708f",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:SKILL_INSTALL_TOKEN_INVALID",
+    "expires_ts": "2026-02-14T00:00:00Z",
+    "approver_id": "HUMAN_A",
+    "token_sha256": "d228a71e08fd5951f7ae82be3a6b79f6c5dd76cda05bab89a4bea5a30943a536"
+  }
+}

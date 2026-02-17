@@ -1,0 +1,57 @@
+{
+  "id": "CT02",
+  "tool": "code.test.run",
+  "cwd": ".",
+  "cmd": "npm install",
+  "env_profile": "node_test_min",
+  "force_nonce": "FIXTURE:CODE_TEST_CMD_NOT_ALLOWED",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.2.0",
+    "permit_id": "PERMIT:CT02",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:CODE_TEST_CMD_NOT_ALLOWED",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:7eb070a948a9d42415eb593605b7a801d8f3bfddfe01e9e30c062f5326ff0b3109d26440f158feca96691faf1ab1cc7c9c96e13962fd87158c7a7a8d68eb32cd",
+      "intent_hash_sha3_512": "sha3-512:c88db05ada2aa2da4f216c532624a4734de4571d6a5832414cb831baa48a6b7ad400f67635f8d19761bd413d3236a1860d4bdfd9eab92eaa75ef306420f67e91"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20,
+      "allowed_ops": [
+        "file.read",
+        "file.write"
+      ],
+      "max_diff_bytes": 200000,
+      "max_added_lines": 200000,
+      "max_removed_lines": 200000,
+      "exec": {
+        "allow": true,
+        "profiles": [
+          "node_test_min"
+        ],
+        "allowed_cmds": [
+          "node -v"
+        ],
+        "max_runtime_ms": 60000,
+        "max_output_bytes": 200000
+      }
+    },
+    "permit_sha256": "sha256:71aa230ff887b5fa975c666a1ae269e515b7f3c46a1889447240a9bb1186f9d3"
+  }
+}

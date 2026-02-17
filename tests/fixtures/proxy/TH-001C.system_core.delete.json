@@ -1,0 +1,6 @@
+{
+  "id": "C3",
+  "tool": "fs.delete",
+  "path": "system_core/config.yaml",
+  "zone": "SYSTEM_CORE"
+}

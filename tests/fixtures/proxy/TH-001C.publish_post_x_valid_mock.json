@@ -1,0 +1,53 @@
+{
+  "id": "PX02",
+  "tool": "publish.post.x",
+  "payload_text": "Hello from post stub (mock, no token).\n",
+  "source_commit_hash": "deadbeef11deadbeef11deadbeef11deadbeef11",
+  "force_nonce": "FIXTURE:PUBLISH_POST_VALID_MOCK",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.2.0",
+    "permit_id": "PERMIT:PX02",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:PUBLISH_POST_VALID_MOCK",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:9fe06a53126a2c5209b294529b88e8a1564f63247fe3464352707ee980e472eea0b2cb00843c1ecc76575e646d587d1ad0ef09e6ff669f92aaed81b041bbacb2",
+      "intent_hash_sha3_512": "sha3-512:659dd6f1fa6a5f48d44422c610564a627fd751157d8ce32348268478bad2659bd6865f58c04d216dc88f8b5f4ad27910fd5b3ddc2377c2e831182519c2a29dcb"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20,
+      "allowed_ops": [
+        "file.read",
+        "file.write"
+      ],
+      "max_diff_bytes": 200000,
+      "max_added_lines": 200000,
+      "max_removed_lines": 200000,
+      "publish": {
+        "allow": true,
+        "allowed_surfaces": [
+          "x"
+        ],
+        "max_payload_bytes": 560,
+        "require_commit_binding": true
+      }
+    },
+    "permit_sha256": "sha256:7f3aa1dbc43b25bf50ca606701eada95bc304394411bc819deb8e8be14cf6fb4"
+  }
+}

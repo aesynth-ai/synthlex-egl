@@ -1,0 +1,14 @@
+{
+  "pack_id": "TH-001B",
+  "version": "0.1.0",
+  "fixtures": {
+    "hash_mismatch": "tests/fixtures/TH-001B.hash-mismatch.intent.json",
+    "lane_mismatch": "tests/fixtures/TH-001B.lane-mismatch.intent.json",
+    "mapped_intent": "tests/fixtures/TH-001B.intent.json",
+    "memory_md_write": "tests/fixtures/TH-001B.memory-md.write.intent.json",
+    "plan_replay": "tests/fixtures/TH-001B.plan-replay.intent.json",
+    "system_core_delete": "tests/fixtures/TH-001B.system-core.delete.intent.json",
+    "unmapped_intent": "tests/fixtures/TH-001B.unmapped.intent.json",
+    "zone_unknown_file_op": "tests/fixtures/TH-001B.zone-unknown.file.intent.json"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "C4",
+  "tool": "fs.read",
+  "path": "sandbox/_th_tmp/toctou_symlink_swap/target.txt",
+  "force_nonce": "FIXTURE:TOCTOU",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.1.0",
+    "permit_id": "PERMIT:C4",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:TOCTOU",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:aea0884a047550e98ec3bab8e0c05581f47f970435935f31eb36549f1cb43e3786b8debab91c46c41a55fdd926da83472ca06e1cabf29a1adc3175d920fb0cd0",
+      "intent_hash_sha3_512": "sha3-512:713a0976bdc2123fdbf3a53c1334fc1d34c67a139d81b408df949b441cee9b97f9ca1b2bda8974b6d3bd535d4e063a899ba6eb2dbd4c2c57422bbb81d23f294a"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20
+    },
+    "permit_sha256": "sha256:e46f609e865e1fb1700ffa59af1b68c049172c5c0894a734530b24bbefb295bc"
+  }
+}

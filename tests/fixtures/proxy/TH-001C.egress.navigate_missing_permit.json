@@ -1,0 +1,6 @@
+{
+  "id": "EN01",
+  "tool": "browser.navigate",
+  "url": "https://example.com/path",
+  "force_nonce": "FIXTURE:EGRESS_NAV_MISSING_PERMIT"
+}

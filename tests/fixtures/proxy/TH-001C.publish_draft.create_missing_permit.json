@@ -1,0 +1,7 @@
+{
+  "id": "P10",
+  "tool": "publish.draft.create",
+  "draft_kind": "x_post",
+  "content": "Hello from EGL draft.\n",
+  "force_nonce": "FIXTURE:PUBLISH_DRAFT_MISSING_PERMIT"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "C7",
+  "tool": "fs.read",
+  "path": "docs/SPEC-EGL-TH-001.md",
+  "lane_id": "LANE_B",
+  "bind_lane_id": "LANE_A"
+}

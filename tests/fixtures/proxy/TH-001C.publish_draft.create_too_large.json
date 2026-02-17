@@ -1,0 +1,44 @@
+{
+  "id": "P12",
+  "tool": "publish.draft.create",
+  "draft_kind": "x_post",
+  "content": "Too large by threshold.\n",
+  "force_nonce": "FIXTURE:PUBLISH_DRAFT_TOO_LARGE",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.1.0",
+    "permit_id": "PERMIT:P12",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:PUBLISH_DRAFT_TOO_LARGE",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:fd041f290231328b8bdc9fe8f8b002cd68d7625bde813f4e9496157ae37b2a20270630f6a9aaf74c82d26393178e0063a2b5139a623d330cee715179ee647d1b",
+      "intent_hash_sha3_512": "sha3-512:f5d746504037356b2d152dc36357c42609bf58d8059a304e6e32eb6032fb352c9887d58ad89470a59090c7525c8636e6c6d79bcd3ba2b02893fe4f416ceaaadf"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20,
+      "allowed_ops": [
+        "file.write"
+      ],
+      "max_diff_bytes": 0,
+      "max_added_lines": 200000,
+      "max_removed_lines": 200000
+    },
+    "permit_sha256": "sha256:c2a1c5a86c8f8bdbba87d7bc7f1d5dc6685e0608afd100e4381295b95855ef15"
+  }
+}

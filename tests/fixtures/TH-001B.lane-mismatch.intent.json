@@ -1,0 +1,18 @@
+{
+  "schema_id": "EGL.INTENT",
+  "version": "0.1.0",
+  "intent_id": "TH-001B-LANE-MISMATCH",
+  "lane_id": "LANE_A",
+  "expected_lane_id": "LANE_B",
+  "actions": [
+    {
+      "action_id": "A1",
+      "kind": "process",
+      "tool_surface_id": "process.node",
+      "process": {
+        "command": "node",
+        "args": ["-e", "console.log('lane')"]
+      }
+    }
+  ]
+}

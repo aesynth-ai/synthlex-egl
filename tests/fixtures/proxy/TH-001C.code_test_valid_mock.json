@@ -1,0 +1,57 @@
+{
+  "id": "CT03",
+  "tool": "code.test.run",
+  "cwd": ".",
+  "cmd": "node -v",
+  "env_profile": "node_test_min",
+  "force_nonce": "FIXTURE:CODE_TEST_VALID_MOCK",
+  "execution_permit": {
+    "schema_id": "EGL.EXECUTION_PERMIT",
+    "version": "0.2.0",
+    "permit_id": "PERMIT:CT03",
+    "issued_by": "SYSTEM",
+    "issued_to_actor_id": "proxy",
+    "issued_to_session_id": "proxy",
+    "lane_id": "proxy",
+    "attestation_nonce": "FIXTURE:CODE_TEST_VALID_MOCK",
+    "expiry_ts": "2099-01-01T00:00:00Z",
+    "bindings": {
+      "law_bundle_sha256": "sha256:50fcb03d5215079076a5c53dcdf36353c6659b9b24cf4b7b006f734daa5828d4",
+      "plan_hash_sha3_512": "sha3-512:04d364fa69a117847a8216020400a7ed77b7b4f9514f925b60c523b45f79b3d738f5d696f64d86569502ce9ab02fa4e0bdcfa356d7466c47b1d6af2f2b8cd3e4",
+      "intent_hash_sha3_512": "sha3-512:7ffd197d93dc7e7f9ff505487fead73cf28ec217899351c4ba9b0a10f992c27c91be3305241b1df87e89c9d2f5e156ee8d7e1a36428eb2c56a8103c68c2fd99d"
+    },
+    "scope": {
+      "execution_target": "SANDBOX",
+      "filesystem": {
+        "read_roots": [
+          "sandbox/"
+        ],
+        "write_roots": [
+          "sandbox/"
+        ],
+        "deny_paths": []
+      },
+      "max_bytes_written": 1048576,
+      "max_files_touched": 20,
+      "allowed_ops": [
+        "file.read",
+        "file.write"
+      ],
+      "max_diff_bytes": 200000,
+      "max_added_lines": 200000,
+      "max_removed_lines": 200000,
+      "exec": {
+        "allow": true,
+        "profiles": [
+          "node_test_min"
+        ],
+        "allowed_cmds": [
+          "node -v"
+        ],
+        "max_runtime_ms": 60000,
+        "max_output_bytes": 200000
+      }
+    },
+    "permit_sha256": "sha256:73b8081036b1456b33a921347da6b6919941e0892b7c6b57f87ecc638db8baef"
+  }
+}
