@@ -70,3 +70,7 @@ Apache-2.0 -- see `LICENSE`.
 ## Security
 
 See `SECURITY.md` for reporting and safe operating rules.
+
+## Research Docs
+
+- `docs/research/PHASE2_ARTIFACT_HANDLING.md` - Status: Research Context (Non-binding).
