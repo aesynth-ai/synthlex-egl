@@ -329,3 +329,18 @@ Template for audit-friendly PR receipts.
 - Golden hashes (proxy-source, mock attest):
   - plan_freeze: 62106608609e9d1d453cb3b91495b37c7f2540282e6a54d105bb6a89c56348ed
   - ledger_canonical: 76e1783b5930001b93928c6aad83944698d576ea63a93761f9d0371a474893b2
+
+## Receipt (TH-001C Deps Egress Host vs Host:Port Refusal Fixtures)
+- Date: 2026-02-17
+- Commands:
+  - node tests/packs/TH-001C.golden.mjs --pack tests/packs/TH-001C.pack.json --runA S53C --runB S53D
+  - node tests/packs/golden.mjs --pack tests/packs/TH-001B.pack.json --runA S53E --runB S53F
+- Evidence (mock):
+  - Added refusal fixtures for `code.deps.fetch` egress canonicalization:
+    - `code_deps_egress_host_443_only` (allowlist `registry.npmjs.org:443`) -> `EGRESS_DENIED`
+    - `code_deps_egress_url_host_443` (allowlist URL form with explicit `:443`) -> `EGRESS_DENIED`
+  - Both fixtures emit `deps.execution.json` + `deps.egress.check.json` and no `deps.result.json` / `deps.receipt.json`.
+  - Canonical target for required deps egress remains host-only `registry.npmjs.org`.
+- Golden hashes (proxy-source, mock attest):
+  - plan_freeze: 1a80d55d943e89d094dfe2769933d0fc973bca7b036b4be97204bf49fcecd15d
+  - ledger_canonical: 820a22ac693ee07bee7fe39c8f5d06b81799e23e4ff6d49903e06817213ed21e

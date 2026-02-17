@@ -3620,6 +3620,8 @@ function runPack({ packPath, runId, attestMode, source, gitMode, execMode, depsM
     checks.deps_fetch_score = Boolean(
       refused("code_deps_missing_permit", "PERMIT_REQUIRED") &&
         refused("code_deps_lockfile_missing", "MISSING_LOCKFILE") &&
+        refused("code_deps_egress_host_443_only", "EGRESS_DENIED") &&
+        refused("code_deps_egress_url_host_443", "EGRESS_DENIED") &&
         admitted("code_deps_valid_mock"),
     );
   }

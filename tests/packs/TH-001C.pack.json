@@ -13,6 +13,8 @@
     "code_test_valid_mock": "tests/fixtures/proxy/TH-001C.code_test_valid_mock.json",
     "code_deps_missing_permit": "tests/fixtures/proxy/TH-001C.code_deps_missing_permit.json",
     "code_deps_lockfile_missing": "tests/fixtures/proxy/TH-001C.code_deps_lockfile_missing.json",
+    "code_deps_egress_host_443_only": "tests/fixtures/proxy/TH-001C.code_deps_egress_host_443_only.json",
+    "code_deps_egress_url_host_443": "tests/fixtures/proxy/TH-001C.code_deps_egress_url_host_443.json",
     "code_deps_valid_mock": "tests/fixtures/proxy/TH-001C.code_deps_valid_mock.json",
     "exec_permit_write_binding_mismatch": "tests/fixtures/proxy/TH-001C.exec_permit.write_binding_mismatch.json",
     "exec_permit_write_invalid_hash": "tests/fixtures/proxy/TH-001C.exec_permit.write_invalid_hash.json",
