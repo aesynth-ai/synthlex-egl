@@ -42,7 +42,8 @@ jobs:
             '*.js' '*.mjs' '*.cjs' '*.ts' '*.mts' '*.cts' \
             '*.json' '*.yml' '*.yaml' '*.toml' '*.ini' \
             '*.sh' '*.bash' '*.zsh' '*.ps1' \
-            '.github/workflows/*'
+            '.github/workflows/*' \
+            ':!.github/workflows/ci.yml'
           status=$?
           set -e
           if [ $status -eq 0 ]; then
