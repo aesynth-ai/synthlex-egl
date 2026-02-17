@@ -3469,6 +3469,7 @@ function runPack({ packPath, runId, attestMode, source, gitMode, execMode, depsM
       refused("egress_navigate_missing_permit", "PERMIT_REQUIRED") &&
         refused("egress_navigate_denied_host", "EGRESS_DENIED") &&
         refused("egress_navigate_http_downgrade", "INSECURE_PROTOCOL") &&
+        refused("egress_navigate_scheme_downgrade_443", "INSECURE_PROTOCOL") &&
         refused("egress_navigate_localhost_denied", "LOCALHOST_DENIED") &&
         admitted("egress_navigate_allow_host_only", "example.com") &&
         admitted("egress_navigate_allow_host_443_only", "example.com:443"),
@@ -3620,8 +3621,9 @@ function runPack({ packPath, runId, attestMode, source, gitMode, execMode, depsM
     checks.deps_fetch_score = Boolean(
       refused("code_deps_missing_permit", "PERMIT_REQUIRED") &&
         refused("code_deps_lockfile_missing", "MISSING_LOCKFILE") &&
-        refused("code_deps_egress_host_443_only", "EGRESS_DENIED") &&
-        refused("code_deps_egress_url_host_443", "EGRESS_DENIED") &&
+        refused("code_deps_egress_drift_444", "EGRESS_DRIFT") &&
+        refused("code_deps_egress_host_443_only", "EGRESS_DRIFT") &&
+        refused("code_deps_egress_url_host_443", "EGRESS_DRIFT") &&
         admitted("code_deps_valid_mock"),
     );
   }

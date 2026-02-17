@@ -120,6 +120,14 @@ function canonicalizeAllowlist(list) {
   return out;
 }
 
+function splitCanonicalTarget(t) {
+  const s = String(t ?? "").trim().toLowerCase();
+  if (!s) return { host: null, port: null, port_explicit: false };
+  const m = s.match(/^([^:\s]+):([0-9]{1,5})$/);
+  if (!m) return { host: s, port: null, port_explicit: false };
+  return { host: m[1], port: Number(m[2]), port_explicit: true };
+}
+
 export function evaluate_egress({ target, protocol, permit_scope }) {
   const parsed = parseTargetFromUrlOrHost(target);
   const proto = (protocol ? String(protocol) : parsed.protocol ? String(parsed.protocol) : "").toUpperCase();
@@ -152,6 +160,20 @@ export function evaluate_egress({ target, protocol, permit_scope }) {
 
   // Allowlist exact-match semantics (host-only != host:port).
   if (!canonical_target || !allowlist.includes(canonical_target)) {
+    // Detect same-host port-shape/port-value drift explicitly.
+    const req = splitCanonicalTarget(canonical_target);
+    if (req.host) {
+      const sameHostDifferentPortShape = allowlist.some((entry) => {
+        const grant = splitCanonicalTarget(entry);
+        if (!grant.host || grant.host !== req.host) return false;
+        if (grant.port_explicit !== req.port_explicit) return true;
+        if (grant.port_explicit && req.port_explicit && grant.port !== req.port) return true;
+        return false;
+      });
+      if (sameHostDifferentPortShape) {
+        return { status: "refused", reason_code: "EGRESS_DRIFT", canonical_target, protocol: proto || null, zone, allowlist };
+      }
+    }
     return { status: "refused", reason_code: "EGRESS_DENIED", canonical_target, protocol: proto || null, zone, allowlist };
   }
 

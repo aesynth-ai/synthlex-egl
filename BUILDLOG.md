@@ -344,3 +344,19 @@ Template for audit-friendly PR receipts.
 - Golden hashes (proxy-source, mock attest):
   - plan_freeze: 1a80d55d943e89d094dfe2769933d0fc973bca7b036b4be97204bf49fcecd15d
   - ledger_canonical: 820a22ac693ee07bee7fe39c8f5d06b81799e23e4ff6d49903e06817213ed21e
+
+## Receipt (TH-001C Egress Drift + Scheme Downgrade Hardening)
+- Date: 2026-02-17
+- Commands:
+  - node tests/packs/TH-001C.golden.mjs --pack tests/packs/TH-001C.pack.json --runA S53I --runB S53J
+  - node tests/packs/golden.mjs --pack tests/packs/TH-001B.pack.json --runA S53K --runB S53L
+- Evidence (mock):
+  - Added explicit drift classification: same host with port-shape/port-value mismatch now refuses with `EGRESS_DRIFT`.
+  - Added deps drift fixture:
+    - `code_deps_egress_drift_444` (`registry.npmjs.org:444` vs required host-only target) -> `EGRESS_DRIFT`
+  - Existing deps host:port mismatch fixtures now also classify as `EGRESS_DRIFT`.
+  - Added scheme downgrade fixture:
+    - `egress_navigate_scheme_downgrade_443` (`http://example.com:443/...`) -> `INSECURE_PROTOCOL` even when host:port matches allowlist.
+- Golden hashes (proxy-source, mock attest):
+  - plan_freeze: bb1962dc3d11f03658c622864b4c7b70e19cdc25943f52e74aea4d0055df8599
+  - ledger_canonical: 4f652f356c8e94aee3948bb4522866fbf83e3c6a8deef37ef0453a950ba8fd00

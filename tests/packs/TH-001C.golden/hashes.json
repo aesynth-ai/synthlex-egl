@@ -5,7 +5,7 @@
     "source": "proxy"
   },
   "expected": {
-    "plan_freeze": "1a80d55d943e89d094dfe2769933d0fc973bca7b036b4be97204bf49fcecd15d",
-    "ledger_canonical": "820a22ac693ee07bee7fe39c8f5d06b81799e23e4ff6d49903e06817213ed21e"
+    "plan_freeze": "bb1962dc3d11f03658c622864b4c7b70e19cdc25943f52e74aea4d0055df8599",
+    "ledger_canonical": "4f652f356c8e94aee3948bb4522866fbf83e3c6a8deef37ef0453a950ba8fd00"
   }
 }

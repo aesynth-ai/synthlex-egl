@@ -883,6 +883,7 @@ function main() {
       ["egress_navigate_missing_permit", "PERMIT_REQUIRED", "refused", "https://example.com/path", "example.com"],
       ["egress_navigate_denied_host", "EGRESS_DENIED", "refused", "https://example.com/path", "example.com"],
       ["egress_navigate_http_downgrade", "INSECURE_PROTOCOL", "refused", "http://example.com/path", "example.com"],
+      ["egress_navigate_scheme_downgrade_443", "INSECURE_PROTOCOL", "refused", "http://example.com:443/path", "example.com:443"],
       ["egress_navigate_localhost_denied", "LOCALHOST_DENIED", "refused", "http://localhost:3000", "localhost:3000"],
       ["egress_navigate_allow_host_only", null, "ok", "https://Example.COM/path", "example.com"],
       ["egress_navigate_allow_host_443_only", null, "ok", "https://example.com:443/path", "example.com:443"],
@@ -1009,45 +1010,66 @@ function main() {
       if (fs.existsSync(path.join(fixtureOut, "deps.receipt.json"))) diffs.push(`code_deps_receipt_present:${fixtureId}`);
     }
     {
-      const fixtureId = "code_deps_egress_host_443_only";
+      const fixtureId = "code_deps_egress_drift_444";
       const dec = readJSON(path.resolve("out", packId, runA, "fixtures", fixtureId, "decision.json"));
       if (dec.status !== "rejected") diffs.push(`code_deps_status:${fixtureId}`);
-      if (dec.reason_code !== "EGRESS_DENIED") diffs.push(`code_deps_reason:${fixtureId}`);
+      if (dec.reason_code !== "EGRESS_DRIFT") diffs.push(`code_deps_reason:${fixtureId}`);
       const fixtureOut = path.resolve("out", packId, runA, "fixtures", fixtureId);
       if (!fs.existsSync(path.join(fixtureOut, "deps.execution.json"))) diffs.push(`code_deps_exec_missing:${fixtureId}`);
       if (fs.existsSync(path.join(fixtureOut, "deps.result.json"))) diffs.push(`code_deps_result_present:${fixtureId}`);
       if (fs.existsSync(path.join(fixtureOut, "deps.receipt.json"))) diffs.push(`code_deps_receipt_present:${fixtureId}`);
       const egress = readJSON(path.join(fixtureOut, "deps.egress.check.json"));
       if (egress.status !== "refused") diffs.push(`code_deps_egress_status:${fixtureId}`);
-      if (egress.reason_code !== "EGRESS_DENIED") diffs.push(`code_deps_egress_reason:${fixtureId}`);
+      if (egress.reason_code !== "EGRESS_DRIFT") diffs.push(`code_deps_egress_reason:${fixtureId}`);
       const c = Array.isArray(egress.checks) ? egress.checks[0] : null;
       if (!c) diffs.push(`code_deps_egress_checks_missing:${fixtureId}`);
       else {
         if (c.target_input !== "registry.npmjs.org") diffs.push(`code_deps_egress_target_input:${fixtureId}`);
         if (c.canonical_target !== "registry.npmjs.org") diffs.push(`code_deps_egress_canonical_target:${fixtureId}`);
         if (c.status !== "refused") diffs.push(`code_deps_egress_check_status:${fixtureId}`);
-        if (c.reason_code !== "EGRESS_DENIED") diffs.push(`code_deps_egress_check_reason:${fixtureId}`);
+        if (c.reason_code !== "EGRESS_DRIFT") diffs.push(`code_deps_egress_check_reason:${fixtureId}`);
+      }
+    }
+    {
+      const fixtureId = "code_deps_egress_host_443_only";
+      const dec = readJSON(path.resolve("out", packId, runA, "fixtures", fixtureId, "decision.json"));
+      if (dec.status !== "rejected") diffs.push(`code_deps_status:${fixtureId}`);
+      if (dec.reason_code !== "EGRESS_DRIFT") diffs.push(`code_deps_reason:${fixtureId}`);
+      const fixtureOut = path.resolve("out", packId, runA, "fixtures", fixtureId);
+      if (!fs.existsSync(path.join(fixtureOut, "deps.execution.json"))) diffs.push(`code_deps_exec_missing:${fixtureId}`);
+      if (fs.existsSync(path.join(fixtureOut, "deps.result.json"))) diffs.push(`code_deps_result_present:${fixtureId}`);
+      if (fs.existsSync(path.join(fixtureOut, "deps.receipt.json"))) diffs.push(`code_deps_receipt_present:${fixtureId}`);
+      const egress = readJSON(path.join(fixtureOut, "deps.egress.check.json"));
+      if (egress.status !== "refused") diffs.push(`code_deps_egress_status:${fixtureId}`);
+      if (egress.reason_code !== "EGRESS_DRIFT") diffs.push(`code_deps_egress_reason:${fixtureId}`);
+      const c = Array.isArray(egress.checks) ? egress.checks[0] : null;
+      if (!c) diffs.push(`code_deps_egress_checks_missing:${fixtureId}`);
+      else {
+        if (c.target_input !== "registry.npmjs.org") diffs.push(`code_deps_egress_target_input:${fixtureId}`);
+        if (c.canonical_target !== "registry.npmjs.org") diffs.push(`code_deps_egress_canonical_target:${fixtureId}`);
+        if (c.status !== "refused") diffs.push(`code_deps_egress_check_status:${fixtureId}`);
+        if (c.reason_code !== "EGRESS_DRIFT") diffs.push(`code_deps_egress_check_reason:${fixtureId}`);
       }
     }
     {
       const fixtureId = "code_deps_egress_url_host_443";
       const dec = readJSON(path.resolve("out", packId, runA, "fixtures", fixtureId, "decision.json"));
       if (dec.status !== "rejected") diffs.push(`code_deps_status:${fixtureId}`);
-      if (dec.reason_code !== "EGRESS_DENIED") diffs.push(`code_deps_reason:${fixtureId}`);
+      if (dec.reason_code !== "EGRESS_DRIFT") diffs.push(`code_deps_reason:${fixtureId}`);
       const fixtureOut = path.resolve("out", packId, runA, "fixtures", fixtureId);
       if (!fs.existsSync(path.join(fixtureOut, "deps.execution.json"))) diffs.push(`code_deps_exec_missing:${fixtureId}`);
       if (fs.existsSync(path.join(fixtureOut, "deps.result.json"))) diffs.push(`code_deps_result_present:${fixtureId}`);
       if (fs.existsSync(path.join(fixtureOut, "deps.receipt.json"))) diffs.push(`code_deps_receipt_present:${fixtureId}`);
       const egress = readJSON(path.join(fixtureOut, "deps.egress.check.json"));
       if (egress.status !== "refused") diffs.push(`code_deps_egress_status:${fixtureId}`);
-      if (egress.reason_code !== "EGRESS_DENIED") diffs.push(`code_deps_egress_reason:${fixtureId}`);
+      if (egress.reason_code !== "EGRESS_DRIFT") diffs.push(`code_deps_egress_reason:${fixtureId}`);
       const c = Array.isArray(egress.checks) ? egress.checks[0] : null;
       if (!c) diffs.push(`code_deps_egress_checks_missing:${fixtureId}`);
       else {
         if (c.target_input !== "registry.npmjs.org") diffs.push(`code_deps_egress_target_input:${fixtureId}`);
         if (c.canonical_target !== "registry.npmjs.org") diffs.push(`code_deps_egress_canonical_target:${fixtureId}`);
         if (c.status !== "refused") diffs.push(`code_deps_egress_check_status:${fixtureId}`);
-        if (c.reason_code !== "EGRESS_DENIED") diffs.push(`code_deps_egress_check_reason:${fixtureId}`);
+        if (c.reason_code !== "EGRESS_DRIFT") diffs.push(`code_deps_egress_check_reason:${fixtureId}`);
       }
     }
     {
