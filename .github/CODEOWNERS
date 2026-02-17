@@ -1,17 +1,14 @@
-# CODEOWNERS
-# Replace the handle(s) below with your GitHub username/team.
+# Fallback owner
+* @vonsassyx
 
-* @repo-maintainers
-
-# Governance / law surfaces
-/policies/ @repo-maintainers
-/authority/ @repo-maintainers
-/harness/ @repo-maintainers
-/schemas/ @repo-maintainers
-/tests/ @repo-maintainers
-/docs/ @repo-maintainers
-/runner.mjs @repo-maintainers
-/package.json @repo-maintainers
-/BUILDLOG.md @repo-maintainers
-/docs/PROXY.md @repo-maintainers
+# Governance / law / policy boundaries
+policy/**                @vonsassyx
+governance/**            @vonsassyx
+law/**                   @vonsassyx
+**/tool_surface_map*.y*  @vonsassyx
+**/policy*.y*            @vonsassyx
+**/*permit*              @vonsassyx
+.github/workflows/**     @vonsassyx
+.github/CODEOWNERS       @vonsassyx
+SECURITY.md              @vonsassyx
 

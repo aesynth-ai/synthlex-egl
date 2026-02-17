@@ -24,6 +24,27 @@ jobs:
             exit 1
           fi
 
+      - name: Block secret-looking files
+        run: |
+          forbidden_re='(\.pem$|\.key$|\.crt$|\.p12$|\.pfx$|^id_rsa$|^id_ed25519$|/id_rsa$|/id_ed25519$|credentials\.json$|service_account\.json$)'
+          hits="$(git ls-files | grep -E "$forbidden_re" || true)"
+          if [ -n "$hits" ]; then
+            echo "Forbidden files are tracked by git:"
+            echo "$hits"
+            exit 1
+          fi
+
+      - name: Block obvious secret patterns (best-effort)
+        run: |
+          set +e
+          git grep -nE 'BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY|AWS_SECRET_ACCESS_KEY|AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z\-_]{35}' -- .
+          status=$?
+          set -e
+          if [ $status -eq 0 ]; then
+            echo "Secret-like patterns detected in tracked files."
+            exit 1
+          fi
+
       - name: Runner help
         run: node ./runner.mjs --help
 
@@ -32,4 +53,3 @@ jobs:
           git ls-files "*.mjs" "*.js" | while read -r f; do
             node --check "$f"
           done
-
